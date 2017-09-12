@@ -33,10 +33,10 @@ To execute a file:
 ```sh
 docker run -it  -v $(pwd):/home/deploy hkanjih/pyspark-2  python /home/deploy/<pythonfile>
 ```
-To execute unittest using this container (thanks for this bash script [Bruxao](https://github.com/hgabreu
-)):
+To execute unittest using this container:
 ```sh
 #!/bin/bash
 tests=($(ls <folder with test scrips>/*.py | grep -v init)); IFS=,; eval docker run -it  -v $(pwd):/home/deploy hkanjih/pyspark-2  pytest "/home/deploy/{${tests[*]}}"
 ```
+<sub> thanks for this bash script [Bruxao](https://github.com/hgabreu)</sub>
 
